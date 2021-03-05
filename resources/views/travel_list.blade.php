@@ -19,7 +19,7 @@
                     <div class="column x5">
 
                         <ul class="list">
-                            <li class="header togo">Negara</li>
+                            <li class="header togo">City</li>
                             @foreach ($togo as $newplace)
                                 <li>{{ $newplace->name }}</li>
                             @endforeach
