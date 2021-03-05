@@ -27,4 +27,8 @@ jobs:
         mkdir -p database
         touch database/database.sqlite
     - name: Execute tests (Unit and Feature tests) via PHPUnit
+      env:
+        DB_CONNECTION: sqlite
+        DB_DATABASE: database/database.sqlite
+        MY_SECRET_KEY: ${{ secrets.MY_SECRET_KEY}}
       run: vendor/bin/phpunit --testdox
